@@ -23,6 +23,7 @@ function App() {
     </Route>
     <Route path='/general' element={<News key="general" pageSize={10} category="general" country="in" />}>
     </Route>
+   
     <Route path='/business' element={<News key="business" pageSize={10} category="business" country="in" />}>
     </Route>
     <Route path='/health' element={<News key="health" pageSize={10} category="health" country="in" />}>
@@ -35,6 +36,7 @@ function App() {
     </Route>
     <Route path='/sports' element={<News key="sports" pageSize={10} category="sports" country="in" />
     }></Route>
+    
   </Routes>
   </Router>
   </div>

@@ -84,8 +84,8 @@ export class News extends Component {
    
     
     return (
-      <div className='container my-3'>
-      <h1 className='text-center' style={{margin:'40px',marginTop:'90px'}}>NewsMonkey-Top Headlines from {this.capitalizeFirstLetter(this.props.category)}</h1>
+      <div className='container my-3' >
+      <h1 className='text-center' style={{margin:'40px',marginTop:'90px'}}>NewsNow-Top Headlines from {this.capitalizeFirstLetter(this.props.category)}</h1>
         
 
 
@@ -93,7 +93,7 @@ export class News extends Component {
           <div className="row">
           {this.state.articles.map((element)=>{
             return  < div className="col md-4" key={element.url}>
-            <Newsitem title={element.title.slice(0,45)} description={element.description ? element.description.slice(0,88) : ''}  imageUrl={element.urlToImage} newsUrl={element.url} date={element.publishedAt}/>
+            <Newsitem title={element.title.slice(0,45)} description={element.description ? element.description.slice(0,88) : ''}  imageUrl={element.urlToImage?element.urlToImage:"https://c8.alamy.com/comp/EDBHH3/illustrative-image-of-the-daily-mail-newspaper-EDBHH3.jpg"} newsUrl={element.url} date={element.publishedAt}/>
             </div>
           })}
               
